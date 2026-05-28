@@ -1,8 +1,19 @@
+import { TimelineItem } from "../../types/timeline";
+
+interface OrbitalNodeProps {
+  item: TimelineItem;
+  position: {
+    x: number;
+    y: number;
+  };
+  onClick: () => void;
+}
+
 export default function OrbitalNode({
   item,
   position,
   onClick,
-}) {
+}: OrbitalNodeProps) {
   const Icon = item.icon;
 
   return (
